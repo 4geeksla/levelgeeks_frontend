@@ -6,7 +6,7 @@ angular.module('levelgeeksFrontendApp')
       .state('login', {
         url:'/login',
         templateUrl: 'views/login.html',
-        controller: 'login'
+        controller: 'LoginCtrl'
       })      
       /*.state('main', {
         url:'/main',
