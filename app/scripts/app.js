@@ -8,6 +8,8 @@
  *
  * Main module of the application.
  */
+var baseUrl = "http://10.10.0.72:8000";
+
 angular
   .module('levelgeeksFrontendApp', [
     'ngAnimate',
@@ -15,21 +17,7 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.router'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+  .value('baseUrl',baseUrl);
