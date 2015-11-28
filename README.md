@@ -1,12 +1,19 @@
 # levelgeeks-frontend
+Levelgeeks es una aplicación para gamificar el progreso de los desarrolladores de 4Geeks.
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.14.0.
+## Requisitos previos
+
+ * node >= 0.10.0
+ * npm 1.4.28
+ *bower 1.4.1
+
+## Instalación
+
+* Correr `npm install`.
+* correr `bower install`
+
+
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
-
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
+Correr `gulp build`
