@@ -7,7 +7,12 @@ angular.module('levelgeeksFrontendApp')
         url:'/login',
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
-      })      
+      })
+      .state('developers', {
+        url: '/developers',
+        templateUrl: 'views/developers.html',
+        controller: 'DevelopersCtrl'
+      })
       /*.state('main', {
         url:'/main',
         templateUrl: 'views/main.html',
