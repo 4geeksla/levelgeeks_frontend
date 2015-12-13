@@ -8,6 +8,7 @@
  *
  * Main module of the application.
  */
+
 var baseUrl = "http://odoo.geekies.co:8010";
 
 angular
@@ -45,4 +46,4 @@ angular
             };
         }
       ]);
-  }]);;
+  }]);

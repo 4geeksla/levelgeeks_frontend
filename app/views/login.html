@@ -2,8 +2,15 @@
 	<div class="container">
 		<div class="row">
 			<div class="login-form col-md-4 col-md-offset-4">
+				<div ng-if="messages.msg.length > 0">
+					<div class="alert alert-{{messages.type}}">
+						<ul>
+							<li ng-repeat="msg in messages.msg">{{msg.text}}</li>
+						</ul>
+					</div>
+				</div>
 				<div class="row">
-					<div class="col-xs-10">
+					<div class="col-md-12">
 						<h1>Inicio de sesión</h1>
 					</div>
 				</div>
@@ -27,13 +34,13 @@
 							<button type="submit" class="btn btn-green btn-block">Ingresar</button>
 						</div>
 					</div>
-					<div class="row">
+					<!-- <div class="row">
 						<div class="col-xs-6">
 							<a href="#/public/restore_password">
 								<h5>¿Olvidó su contraseña?</h5>
 							</a>
 						</div>
-					</div>
+					</div> -->
 				</form>
 			</div>
 		</div>
