@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-var baseUrl = "http://10.10.0.72:8000";
+var baseUrl = "http://odoo.geekies.co:8010";
 
 angular
   .module('levelgeeksFrontendApp', [
@@ -22,13 +22,14 @@ angular
   ])
   .value('baseUrl',baseUrl)
   .config( ['$httpProvider', function($httpProvider,$http, $location){
+    $httpProvider.defaults.withCredentials = true;
     $httpProvider.interceptors.push(['$q', '$window','$location',
       function($q, $window,$location){
         return {
           request: function(config) {
             config.headers = config.headers || {};
             if (localStorage.getItem('token')) {
-                          config.headers["X-Auth-Token"] = localStorage.getItem('token');
+                          config.headers["Authorization"] = localStorage.getItem('token');
                       }
                     return config;
                 },

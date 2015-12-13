@@ -1,0 +1,33 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-10">
+			<h1>Listado de desarroladores</h1>
+		</div>
+		<div class="col-md-2">
+			<button ng-click="crearDevelop()" class="btn btn-success">Añadir desarrolador</button>
+		</div>
+	</div>
+	<div class="row">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>username</th>
+					<th>email</th>
+					<th>nivel</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="develop in developers">
+					<td>{{develop.username}}</td>
+					<td>{{develop.email}}</td>
+					<td>{{develop.nivel}}</td>
+					<td>
+						<button class="btn btn-info" ng-click="viewDeveloper($index)">Ver</button>
+						<button class="btn btn-success" ng-click="editDeveloper($index)">Editar</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>		
+	</div>
+</div>

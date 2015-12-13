@@ -1,0 +1,60 @@
+<section id="leads">
+	<div class="container">		
+		<div class="form-box right">
+			<div class="content">
+				<form name="form" ng-submit="saveDeveloper(form)" novalidate>					
+					<div class="row valign-wrapper">
+						<div class="col-sm-5 text-left">
+							<label for=""><strong>Username</strong></label>
+						</div>
+						<div class="col-sm-7">
+							<input type="text" ng-model="developer.username" required>
+						</div>
+					</div>
+					<div class="row valign-wrapper">
+						<div class="col-sm-5 text-left">
+							<label for=""><strong>Email</strong></label>
+						</div>
+						<div class="col-sm-7">
+							<input type="email" ng-model="developer.email" required>
+						</div>
+					</div>
+					<div class="row valign-wrapper">
+						<div class="col-sm-5 text-left">
+							<label for=""><strong>nombre</strong></label>
+						</div>
+						<div class="col-sm-7">
+							<input type="text" ng-model="developer.first_name">
+						</div>
+					</div>
+					<div class="row valign-wrapper">
+						<div class="col-sm-5 text-left">
+							<label for=""><strong>Apellido</strong> line 2</label>
+						</div>
+						<div class="col-sm-7">
+							<input type="text" ng-model="developer.last_name">
+						</div>
+					</div>					
+					<div class="row valign-wrapper">
+						<div class="col-sm-5 text-left">
+							<label for=""><strong>Informacióin</strong></label>
+						</div>
+						<div class="col-sm-7">
+							<input type="text" ng-model="developer.info">
+						</div>
+					</div>
+					<div class="row valign-wrapper" ng-show="form.$submitted && !form.$valid">
+						<div class="col-sm-12 text-center">
+							<label for=""><strong>{{ error }}</strong></label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-5 col-xs-offset-1">
+							<button type="submit">Guardar</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>

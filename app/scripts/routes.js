@@ -10,7 +10,7 @@ angular.module('levelgeeksFrontendApp')
       })
       .state('developers', {
         url: '/developers',
-        templateUrl: 'views/developers.html',
+        templateUrl: 'views/admin/add_developers.html',
         controller: 'DevelopersCtrl'
       })
       /*.state('main', {
