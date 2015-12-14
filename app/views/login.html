@@ -1,48 +1,27 @@
-<div id="login" class="public-view">
-	<div class="container">
-		<div class="row">
-			<div class="login-form col-md-4 col-md-offset-4">
-				<div ng-if="messages.msg.length > 0">
-					<div class="alert alert-{{messages.type}}">
-						<ul>
-							<li ng-repeat="msg in messages.msg">{{msg.text}}</li>
-						</ul>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<h1>Inicio de sesión</h1>
-					</div>
-				</div>
-				<form name="form" ng-submit="iniciarSesion()" class="clearfix">
-					<div class="row">
-						<div class="col-md-12">
-							<p>
-								<input class="form-control" name="correo" ng-model="correo" type="text" placeholder="Correo electronico" >
-							</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<p>
-								<input class="form-control" name="password" ng-model="pass" type="password" placeholder="Contraseña">
-							</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<button type="submit" class="btn btn-green btn-block">Ingresar</button>
-						</div>
-					</div>
-					<!-- <div class="row">
-						<div class="col-xs-6">
-							<a href="#/public/restore_password">
-								<h5>¿Olvidó su contraseña?</h5>
-							</a>
-						</div>
-					</div> -->
-				</form>
-			</div>
-		</div>
-	</div>
+<nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">LevelGeeks</a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+</nav>
+<div class="section no-pad-bot container" id="index-banner">
+   <form class="col s12 container">
+     <h5>Login</h5>
+     <div class="row">
+          <div input-field  class="col s12">
+            <input id="email" type="email" class="validate" ng-model="user.email" required>
+            <label for="email" data-error="Error" >Email</label>
+          </div>
+      </div>
+      <div class="row">
+          <div input-field class=" col s12">
+            <input id="password" type="password" class="validate" ng-model="user.password" required>
+            <label for="password">Password</label>
+          </div>
+      </div>
+     <div class="row">
+        <div class="col s3 push-s8">
+          <button class="btn waves-effect waves-light" type="submit" ng-click="login()">Ingresar</button>
+        </div>
+      </div>
+   </form>
 </div>

@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 
-var baseUrl = "http://odoo.geekies.co:8010";
+var baseUrl = "http://localhost:1337/";
 
 angular
   .module('levelgeeksFrontendApp', [
@@ -19,7 +19,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.router'
+    'ui.router',
+    'ui.materialize'
   ])
   .value('baseUrl',baseUrl)
   .config( ['$httpProvider', function($httpProvider,$http, $location){
