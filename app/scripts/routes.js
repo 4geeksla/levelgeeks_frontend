@@ -1,6 +1,6 @@
 
-angular.module('levelgeeksFrontendApp')
-.config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider,$stateProvider) {
+angular.module('levelgeeksApp')
+  .config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider,$stateProvider) {
     $urlRouterProvider.otherwise("/login");
     $stateProvider
       .state('login', {
@@ -8,12 +8,12 @@ angular.module('levelgeeksFrontendApp')
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
       })
-      .state('developers', {
-        url: '/developers',
-        templateUrl: 'views/admin/add_developers.html',
-        controller: 'DevelopersCtrl'
+      .state('main', {
+        url: '/main',
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl'
       })
-      /*.state('main', {
+    /*.state('main', {
         url:'/main',
         templateUrl: 'views/main.html',
         controller: 'main'
@@ -54,4 +54,4 @@ angular.module('levelgeeksFrontendApp')
           }
         }
       })*/
-}]);
+  }]);

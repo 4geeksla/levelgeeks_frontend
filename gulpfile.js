@@ -54,7 +54,7 @@ gulp.task('ngdocs', [], function () {
   var options = {
     html5Mode: true,
     startPage: '/api',
-    title: "Dreambuilder Api Doc",
+    title: "Levelgeeks Api Doc",
     titleLink: "/api"
   };
   return gulp.src('app/scripts/**/*.js')

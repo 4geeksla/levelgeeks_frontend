@@ -7,23 +7,17 @@
  * # MainCtrl
  * Controller of the levelgeeksFrontendApp
  */
-angular.module('levelgeeksFrontendApp')
-  .controller('LoginCtrl', function ($scope, $http, $state) {
+angular.module('levelgeeksApp')
+  .controller('LoginCtrl', function ($scope, $http, $state,AuthService,AUTH_EVENTS,toastr) {
 
     $scope.user = {};
     $scope.login = function() {
-    		var request = {
-    			  email:$scope.user.email,
-            password:$scope.user.password
-    		};
-    		$http({
-                method:'post',
-                url:baseUrl+'auth',
-                data:request
-        }).success(function(data){
-          console.log(data);
-			  }).error(function(data){ // errores http 403, 501, 500, 404,
-          console.log(data);
-			  });
-		}
+      AuthService.login($scope.user).then(function(res){
+        $scope.$broadcast(AUTH_EVENTS.loginSuccess);
+        $state.go('main');
+      },function(error){
+        toastr.error(error.data.err,'Error');
+        $scope.$broadcast(AUTH_EVENTS.loginFailed);
+      });
+    }
   });

@@ -9,7 +9,7 @@
  */
 
 
-angular.module('levelgeeksFrontendApp').controller('DevelopersCtrl', function ($scope, $servicios) {
+angular.module('levelgeeksApp').controller('DevelopersCtrl', function ($scope, $servicios) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
